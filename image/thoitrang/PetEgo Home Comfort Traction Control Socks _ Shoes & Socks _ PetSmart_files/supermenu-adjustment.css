@@ -1,0 +1,9 @@
+.pet-main-nav-item-level1:hover .main-nav-dropdown {
+    left: 22px
+}
+
+.pet-main-nav-item-level1:hover .main-nav-dropdown-services, .pet-main-nav-item-level1:hover .main-nav-dropdown-sale {
+    left: 406px;
+}
+
+.pet-main-nav-item-level1:hover .main-nav-dropdown-giving {left: 246px}

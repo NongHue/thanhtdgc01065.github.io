@@ -1,0 +1,49 @@
+.petsmart-header__promo-container {
+  margin: 3px 0 0px 0;
+  padding: 0; }
+  
+  .petsmart-header__promo-container__column {
+  list-style-type: none;
+  float: left;
+  width: 326px;
+  background-color: #f4f4f4;
+  padding: 8px;
+  margin: 0 3px 0 0; }
+
+.petsmart-header__promo-container__column--last {
+  margin-right: 0; }
+  
+  .petsmart-header__promo {
+  text-align: center;
+  cursor: pointer; }
+
+.petsmart-header__promo h4 {
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: normal;
+  font-weight: 700;
+  margin: 0; }
+
+.petsmart-header__promo p {
+font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: normal;
+  margin: 0;
+  font-weight: 200;
+  color: #363636; }
+
+.petsmart-header__promo a {
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #c8102e; text-decoration: none}
+
+.petsmart-header__promo__link-with-caret:after {
+  content: " ";
+  display: inline-block;
+  background-image: url(http://www.petsmart.ca/gsi/static/WFS/PETNA-Site/-/PETNA-PETCA/en_US/_images/petsmart-header__icons.png);
+  background-repeat: no-repeat;
+  background-position: -26px -270px;
+  width: 8px;
+  height: 8px; }
+
+
+
