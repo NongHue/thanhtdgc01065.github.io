@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Quản lý Tin tức</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="AdminHome.html">Xin chào, Trần D. Thanh</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>SonTN</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Hôm qua</em>
+                                    </span>
+                                </div>
+                                <div>Nội dung email. Nội dung email. Nội dung email. Nội dung email. Nội dung email...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>HueNT</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Hôm qua</em>
+                                    </span>
+                                </div>
+                                <div>Nội dung email. Nội dung email. Nội dung email. Nội dung email. Nội dung email...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>ThanhDT</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Hôm qua</em>
+                                    </span>
+                                </div>
+                                <div>Nội dung email. Nội dung email. Nội dung email. Nội dung email. Nội dung email...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Đọc tất cả</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->                
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i>Tiểu sử người dùng</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i>Cấu hình</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="LoginPage.html"><i class="fa fa-sign-out fa-fw"></i>Đăng xuất</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Tìm kiếm...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="AdminHome.html"><i class="fa fa-dashboard fa-fw"></i> Trang chủ Quản trị</a>
+                        </li>
+                        <li>
+                            <a href="AdminProduct.html"><i class="fa fa-github-alt fa-fw"></i> Quản lý Danh mục sản phẩm</a>
+                        </li>
+                        <li>
+                            <a href="AdminOrder.html"><i class="fa fa-credit-card fa-fw"></i> Quản lý Đơn hàng</a>
+                        </li>
+                        <li>
+                            <a href="AdminNews.html"><i class="fa fa-file-text-o fa-fw"></i> Quản lý Tin tức</a>
+                        </li>
+                        <li>
+                            <a href="AdminCustomer.html"><i class="fa fa-info fa-fw"></i> Quản lý Khách hàng <span class="badge">3</span></a>
+						</li>                        
+                        <li>
+                            <a href="AdminUser.html"><i class="fa fa-users fa-fw"></i> Quản lý Người dùng</a>                            
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Quản lý Tin tức</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="dataTable_wrapper">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>Ngày tháng</th>
+                                            <th>Tiêu đề</th>
+                                            <th>Khu vực</th>
+                                            <th>Tác giả</th>
+                                            <th>Trạng thái</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd gradeX">
+                                            <td>Wed 29-04-2015 11:20:15</td>
+                                            <td>Hot girl Kenny Sang lần đầu tiên lên tiếng về việc ăn thịt chó</td>
+                                            <td>Trang chủ</td>
+                                            <td>hungdq</td>
+                                            <td>Đã duyệt (thanhtd) Wed 29-04-2015 11:24:15</td>
+                                        </tr>
+                                        <tr class="even gradeC">
+                                            <td>Wed 29-04-2015 11:21:15</td>
+                                            <td>Người đi đường bất ngờ với cuộc diễu hành tôn vinh chó Phú Quốc tại Hà Nội</td>
+                                            <td>Trang chủ</td>
+                                            <td>hungdp</td>
+                                            <td>Đã duyệt (thanhtd) Wed 29-04-2015 11:26:15</td>
+                                        </tr>
+                                        <tr class="odd gradeA">
+                                            <td>Wed 29-04-2015 15:01:06</td>
+                                            <td>Cộng đồng tiếc thương "chú chó chiến đấu với cẩu tặc" đã qua đời</td>
+                                            <td>Trang chủ</td>
+                                            <td>vanln</td>
+                                            <td>Đã duyệt (docgd) Wed 29-04-2015 15:06:06</td>
+                                        </tr>
+                                        <tr class="even gradeA">
+                                            <td>Wed 29-04-2015 15:07:06</td>
+                                            <td>Chó ngao tây tạng hết thời bị đưa vào lò mổ</td>
+                                            <td>Trang chủ</td>
+                                            <td>hank</td>
+                                            <td>Từ chối (docgd). Lý do: Không phù hợp Wed 29-04-2015 16:07:06</td>
+                                        </tr>
+                                        <tr class="odd gradeA">
+                                            <td>Wed 29-04-2015 16:02:06</td>
+                                            <td>"Chuyện tình" chó và ngỗng </td>
+                                            <td>Trang chủ</td>
+                                            <td>vanln</td>
+                                            <td>Chờ phê duyệt</td>
+                                        </tr>
+                                        <tr class="even gradeA">
+                                            <td>Wed 29-04-2015 16:12:06</td>
+                                            <td>Cảm động chuyện chó cứu chủ nhân khỏi “bà hoả”</td>
+                                            <td>Trang chủ</td>
+                                            <td>vanln</td>
+                                            <td>Chờ phê duyệt</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+						</div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+	
+    <!-- jQuery -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="dist/js/sb-admin-2.js"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+                responsive: true
+        });
+    });
+    </script>
+
+</body>
+
+</html>

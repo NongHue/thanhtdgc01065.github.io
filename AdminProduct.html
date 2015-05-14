@@ -1,0 +1,727 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Quản lý Danh mục sản phẩm</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <style>
+	.thanhtd>tbody>tr:hover{
+		cursor: pointer;
+	}
+	</style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="AdminHome.html">Xin chào, Trần D. Thanh</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>SonTN</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Hôm qua</em>
+                                    </span>
+                                </div>
+                                <div>Nội dung email. Nội dung email. Nội dung email. Nội dung email. Nội dung email...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>HueNT</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Hôm qua</em>
+                                    </span>
+                                </div>
+                                <div>Nội dung email. Nội dung email. Nội dung email. Nội dung email. Nội dung email...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>ThanhDT</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Hôm qua</em>
+                                    </span>
+                                </div>
+                                <div>Nội dung email. Nội dung email. Nội dung email. Nội dung email. Nội dung email...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Đọc tất cả</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->                
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i>Tiểu sử người dùng</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i>Cấu hình</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="LoginPage.html"><i class="fa fa-sign-out fa-fw"></i>Đăng xuất</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Tìm kiếm...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="AdminHome.html"><i class="fa fa-dashboard fa-fw"></i> Trang chủ Quản trị</a>
+                        </li>
+                        <li>
+                            <a href="AdminProduct.html"><i class="fa fa-github-alt fa-fw"></i> Quản lý Danh mục sản phẩm</a>
+                        </li>
+                        <li>
+                            <a href="AdminOrder.html"><i class="fa fa-credit-card fa-fw"></i> Quản lý Đơn hàng</a>
+                        </li>
+                        <li>
+                            <a href="AdminNews.html"><i class="fa fa-file-text-o fa-fw"></i> Quản lý Tin tức</a>
+                        </li>
+                        <li>
+                            <a href="AdminCustomer.html"><i class="fa fa-info fa-fw"></i> Quản lý Khách hàng <span class="badge">3</span></a>
+						</li>                        
+                        <li>
+                            <a href="AdminUser.html"><i class="fa fa-users fa-fw"></i> Quản lý Người dùng</a>                            
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Quản lý Danh mục sản phẩm</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                    <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="dataTable_wrapper">
+                                <table class="table table-striped table-bordered table-hover thanhtd" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>Mã sản phẩm</th>
+                                            <th>Tên sản phẩm</th>
+                                            <th>Giới tính</th>
+                                            <th>Số lượng</th>
+                                            <th>Giá</th>
+                                            <th>Giống</th>
+                                            <th>Trạng thái sản phẩm</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd gradeX" data-toggle="modal" data-target="#SanPham1">
+                                            <td>A0001</td>
+                                            <td>Alaskan Đen trắng (3 tháng tuổi)</td>
+                                            <td>Đực</td>
+                                            <td>1</td>
+                                            <td>5.000.000đ</td>
+                                            <td>Alaskan</td>
+                                            <td>Còn hàng</td>
+                                        </tr>
+                                        <tr class="even gradeC" data-toggle="modal" data-target="#SanPham2">
+                                            <td>A0002</td>
+                                            <td>Alaskan Nâu đỏ (3 tháng tuổi)</td>
+                                            <td>Cái</td>
+                                            <td>1</td>
+                                            <td>6.000.000đ</td>
+                                            <td>Alaskan</td>
+                                            <td>Còn hàng</td>
+                                        </tr>
+                                        <tr class="odd gradeA" data-toggle="modal" data-target="#SanPham3">
+                                            <td>A0003</td>
+                                            <td>Alaskan Đen trắng (15 ngày tuổi)</td>
+                                            <td>Đực</td>
+                                            <td>3</td>
+                                            <td>5.000.000đ</td>
+                                            <td>Alaskan</td>
+                                            <td>Nhận đặt hàng</td>
+                                        </tr>
+                                        <tr class="even gradeA" data-toggle="modal" data-target="#SanPham4">
+                                            <td>A0004</td>
+                                            <td>Alaskan Đen trắng (15 ngày tuổi)</td>
+                                            <td>Cái</td>
+                                            <td>2</td>
+                                            <td>5.000.000đ</td>
+                                            <td>Alaskan</td>
+                                            <td>Nhận đặt hàng</td>
+                                        </tr>
+                                        <tr class="even gradeA" data-toggle="modal" data-target="#SanPham5">
+                                            <td>H0001</td>
+                                            <td>Husky Nâu đỏ (6 tháng tuổi)</td>
+                                            <td>Cái</td>
+                                            <td>1</td>
+                                            <td>15.000.000đ</td>
+                                            <td>Husky</td>
+                                            <td>Còn hàng</td>
+                                        </tr>
+                                        <tr class="gradeA" data-toggle="modal" data-target="#SanPham6">
+                                            <td>S0001</td>
+                                            <td>Samoyed Trắng (3 tháng tuổi)</td>
+                                            <td>Cái</td>
+                                            <td>1</td>
+                                            <td>7.000.000đ</td>
+                                            <td>Samoyed</td>
+                                            <td>Còn hàng</td>
+                                        </tr>
+                                        <tr class="gradeA" data-toggle="modal" data-target="#SanPham7">
+                                            <td>S0002</td>
+                                            <td>Samoyed Trắng (3 tháng tuổi)</td>
+                                            <td>Đực</td>
+                                            <td>1</td>
+                                            <td>7.000.000đ</td>
+                                            <td>Samoyed</td>
+                                            <td>Còn hàng</td>
+                                        </tr>
+                                        <tr class="gradeA" data-toggle="modal" data-target="#SanPham8">
+                                            <td>G0001</td>
+                                            <td>Golden Vàng (15 ngày tuổi)</td>
+                                            <td>Đực</td>
+                                            <td>1</td>
+                                            <td>7.000.000đ</td>
+                                            <td>Golden</td>
+                                            <td>Nhận đặt hàng</td>
+                                        </tr>
+                                        <tr class="gradeA" data-toggle="modal" data-target="#SanPham9">
+                                            <td>G0002</td>
+                                            <td>Golden Vàng (15 ngày tuổi)</td>
+                                            <td>Cái</td>
+                                            <td>1</td>
+                                            <td>7.000.000đ</td>
+                                            <td>Golden</td>
+                                            <td>Nhận đặt hàng</td>
+                                        </tr>
+                                        <tr class="gradeA" data-toggle="modal" data-target="#SanPham10">
+                                            <td>F0001</td>
+                                            <td>Phốc sóc Trắng (10 ngày tuổi)</td>
+                                            <td>Đực</td>
+                                            <td>1</td>
+                                            <td>4.000.000đ</td>
+                                            <td>Phốc sóc</td>
+                                            <td>Nhận đặt hàng</td>
+                                        </tr>
+									</tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ThemSanPham">Thêm Sản phẩm</button>
+                        <!-- /.panel-body -->
+						</div>
+                    <!-- /.panel -->
+					</div>
+                <!-- /.col-lg-12 -->
+				</div>
+            <!-- /.row -->
+			</div>
+        <!-- /#page-wrapper -->
+		</div>
+    </div>
+    <!-- /#wrapper -->
+    
+    <div class="modal fade" id="ThemSanPham" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Thêm sản phẩm</h4>
+				</div>
+				<div class="modal-body">
+					<form role="form">
+						<div class="form-group">
+							<label class="control-label">Tên sản phẩm:</label>
+							<input class="form-control" id="productName" type="text" placeholder="Nhập tên sản phẩm...">
+						</div>
+						<div>
+                    		<label class="control-label">Giới tính:</label>
+                    		<label class="radio-inline">
+      							<input type="radio" name="optradio">Đực
+    						</label>
+    						<label class="radio-inline">
+      							<input type="radio" name="optradio">Cái
+    						</label>
+                        	<label class="radio-inline">
+      							<input type="radio" name="optradio">Không có
+    						</label>
+                    	</div>
+                    	<div class="form-group">
+      						<label class="control-label">Màu sắc:</label>
+        					<input class="form-control" id="productColor" type="text" placeholder="Nhập màu sản phẩm...">
+    					</div>
+                    	<div class="form-group">
+      						<label for="sel1">Số lượng:</label>
+							<select class="form-control" id="productNumbers">
+								<option>0</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+								<option>9</option>
+								<option>10</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="control-label">Giá:</label>
+							<input class="form-control" id="productPrice" type="text" placeholder="Nhập giá sản phẩm...">
+						</div>
+						<div class="form-group">
+							<label for="sel1">Giống:</label>
+							<select class="form-control" id="productType">
+								<option>Alaskan</option>
+								<option>Golden</option>
+								<option>Husky</option>
+								<option>Phốc sóc</option>
+								<option>Samoyed</option>
+								<option>Khác/Phụ kiện</option>
+							</select>
+						</div>
+						<div>
+							<label class="control-label">Hình ảnh:</label>
+							<div class="input-group">
+								<span class="input-group-btn">
+									<span class="btn btn-primary btn-file">Chọn file&hellip; <input type="file" multiple></span>
+								</span>
+								<input type="text" class="form-control" readonly>
+							</div>
+							<span class="help-block">Đính kèm file ảnh. Có thể đính kèm nhiều file một lúc.</span>
+						</div>
+						<div class="form-group">
+							<label for="comment">Ghi chú:</label>
+							<textarea class="form-control" rows="5" id="comment"></textarea>
+						</div>
+						<div class="form-group">
+							<label for="sel1">Trạng thái sản phẩm:</label>
+							<select class="form-control" id="productStatus">
+								<option>Còn hàng</option>
+								<option>Nhận đặt hàng</option>
+								<option>Liên hệ</option>
+								<option>Hết hàng</option>
+							</select>
+						</div>                    
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
+					<button type="submit" class="btn btn-default" data-dismiss="modal">Hủy bỏ</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="SanPham1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Thông tin sản phẩm: Alaskan Đen Trắng (3 tháng tuổi)</h4>
+				</div>
+				<div class="modal-body">					
+					<img class="img-responsive" src="img/sanpham1.jpg" alt="Alaskan Đen Trắng (3 tháng tuổi)" width="460" height="345"> 
+					<br>
+					<p><b>Mã sản phẩm:</b> A0001</p>
+					<p><b>Tên sản phẩm:</b> Alaskan Đen Trắng (3 tháng tuổi)</p>
+					<p><b>Giới tính:</b> Đực</p>
+					<p><b>Số lượng còn lại:</b> 1</p>
+					<p><b>Giá:</b> 5.000.000đ</p>
+					<p><b>Giống:</b> Alaskan</p>
+					<p><b>Ghi chú:</b> Đã tiêm 2 mũi (15/6/2015: tiêm nhắc lại lần 3)</p>
+					<p><b>Trạng thái sản phẩm:</b> Còn hàng</p>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary">Thay đổi thông tin</button>
+					<button type="submit" class="btn btn-primary">Xóa sản phẩm</button>
+					<button type="submit" class="btn btn-default" data-dismiss="modal">Đóng</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="SanPham2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Thông tin sản phẩm: Alaskan Nâu đỏ (3 tháng tuổi)</h4>
+				</div>
+				<div class="modal-body">					
+					<img class="img-responsive" src="img/sanpham2.jpg" alt="Alaskan Đen Trắng (3 tháng tuổi)" width="460" height="345"> 
+					<br>
+					<p><b>Mã sản phẩm:</b> A0002</p>
+					<p><b>Tên sản phẩm:</b> Alaskan Nâu đỏ (3 tháng tuổi)</p>
+					<p><b>Giới tính:</b> Cái</p>
+					<p><b>Số lượng còn lại:</b> 1</p>
+					<p><b>Giá:</b> 6.000.000đ</p>
+					<p><b>Giống:</b> Alaskan</p>
+					<p><b>Ghi chú:</b> Đã tiêm 2 mũi (20/6/2015: tiêm nhắc lại lần 3</p>
+					<p><b>Trạng thái sản phẩm:</b> Còn hàng</p>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary">Thay đổi thông tin</button>
+					<button type="submit" class="btn btn-primary">Xóa sản phẩm</button>
+					<button type="submit" class="btn btn-default" data-dismiss="modal">Đóng</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="SanPham3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Thông tin sản phẩm: Alaskan Đen Trắng (15 ngày tuổi)</h4>
+				</div>
+				<div class="modal-body">					
+					<img class="img-responsive" src="img/sanpham3.jpg" alt="Alaskan Đen Trắng (15 ngày tuổi)" width="460" height="345"> 
+					<br>
+					<p><b>Mã sản phẩm:</b> A0003</p>
+					<p><b>Tên sản phẩm:</b> Alaskan Đen Trắng (15 ngày tuổi)</p>
+					<p><b>Giới tính:</b> Đực</p>
+					<p><b>Số lượng còn lại:</b> 3</p>
+					<p><b>Giá:</b> 5.000.000đ</p>
+					<p><b>Giống:</b> Alaskan</p>
+					<p><b>Ghi chú:</b> Đã tiêm phòng 1 mũi, (01/6/2015: tiêm nhắc lại lần 2), bắt đầu bán ngày 01/7/2015</p>
+					<p><b>Trạng thái sản phẩm:</b> Nhận đặt hàng</p>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary">Thay đổi thông tin</button>
+					<button type="submit" class="btn btn-primary">Xóa sản phẩm</button>
+					<button type="submit" class="btn btn-default" data-dismiss="modal">Đóng</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="SanPham4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Thông tin sản phẩm: Alaskan Đen Trắng (15 ngày tuổi)</h4>
+				</div>
+				<div class="modal-body">					
+					<img class="img-responsive" src="img/sanpham3.jpg" alt="Alaskan Đen Trắng (15 ngày tuổi)" width="460" height="345"> 
+					<br>
+					<p><b>Mã sản phẩm:</b> A0004</p>
+					<p><b>Tên sản phẩm:</b> Alaskan Đen Trắng (15 ngày tuổi)</p>
+					<p><b>Giới tính:</b> Cái</p>
+					<p><b>Số lượng còn lại:</b> 2</p>
+					<p><b>Giá:</b> 5.000.000đ</p>
+					<p><b>Giống:</b> Alaskan</p>
+					<p><b>Ghi chú:</b> Đã tiêm phòng 1 mũi, (01/6/2015: tiêm nhắc lại lần 2), bắt đầu bán ngày 01/7/2015</p>
+					<p><b>Trạng thái sản phẩm:</b> Nhận đặt hàng</p>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary">Thay đổi thông tin</button>
+					<button type="submit" class="btn btn-primary">Xóa sản phẩm</button>
+					<button type="submit" class="btn btn-default" data-dismiss="modal">Đóng</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="SanPham10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Thông tin sản phẩm: Phốc sóc Trắng (10 ngày tuổi)</h4>
+				</div>
+				<div class="modal-body">					
+					<img class="img-responsive" src="img/sanpham10.jpg" alt="Phốc sóc Trắng (10 ngày tuổi)" width="460" height="345"> 
+					<br>
+					<p><b>Mã sản phẩm:</b> F0001</p>
+					<p><b>Tên sản phẩm:</b> Phốc sóc Trắng (10 ngày tuổi)</p>
+					<p><b>Giới tính:</b> Đực</p>
+					<p><b>Số lượng còn lại:</b> 2</p>
+					<p><b>Giá:</b> 4.000.000đ</p>
+					<p><b>Giống:</b> Phốc sóc</p>
+					<p><b>Ghi chú:</b> Đã tiêm 2 mũi (15/6/2015: tiêm nhắc lại lần 3), bắt đầu bán ngày 01/7/2015</p>
+					<p><b>Trạng thái sản phẩm:</b> Nhận đặt hàng</p>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary">Thay đổi thông tin</button>
+					<button type="submit" class="btn btn-primary">Xóa sản phẩm</button>
+					<button type="submit" class="btn btn-default" data-dismiss="modal">Đóng</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="SanPham8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Thông tin sản phẩm: Golden (15 ngày tuổi)</h4>
+				</div>
+				<div class="modal-body">					
+					<img class="img-responsive" src="img/sanpham89.jpg" alt="Golden (15 ngày tuổi)" width="460" height="345"> 
+					<br>
+					<p><b>Mã sản phẩm:</b> G0001</p>
+					<p><b>Tên sản phẩm:</b> Golden (15 ngày tuổi)</p>
+					<p><b>Giới tính:</b> Đực</p>
+					<p><b>Số lượng còn lại:</b> 1</p>
+					<p><b>Giá:</b> 7.000.000đ</p>
+					<p><b>Giống:</b> Golden</p>
+					<p><b>Ghi chú:</b> Đã tiêm 2 mũi (15/6/2015: tiêm nhắc lại lần 3), bắt đầu bán ngày 01/7/2015</p>
+					<p><b>Trạng thái sản phẩm:</b> Nhận đặt hàng</p>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary">Thay đổi thông tin</button>
+					<button type="submit" class="btn btn-primary">Xóa sản phẩm</button>
+					<button type="submit" class="btn btn-default" data-dismiss="modal">Đóng</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="SanPham9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Thông tin sản phẩm: Golden (15 ngày tuổi)</h4>
+				</div>
+				<div class="modal-body">					
+					<img class="img-responsive" src="img/sanpham89.jpg" alt="Golden (15 ngày tuổi)" width="460" height="345"> 
+					<br>
+					<p><b>Mã sản phẩm:</b> G0002</p>
+					<p><b>Tên sản phẩm:</b> Golden (15 ngày tuổi)</p>
+					<p><b>Giới tính:</b> Cái</p>
+					<p><b>Số lượng còn lại:</b> 1</p>
+					<p><b>Giá:</b> 7.000.000đ</p>
+					<p><b>Giống:</b> Golden</p>
+					<p><b>Ghi chú:</b> Đã tiêm 2 mũi (15/6/2015: tiêm nhắc lại lần 3), bắt đầu bán ngày 01/7/2015</p>
+					<p><b>Trạng thái sản phẩm:</b> Nhận đặt hàng</p>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary">Thay đổi thông tin</button>
+					<button type="submit" class="btn btn-primary">Xóa sản phẩm</button>
+					<button type="submit" class="btn btn-default" data-dismiss="modal">Đóng</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="SanPham5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Thông tin sản phẩm: Husky Nâu đỏ (6 tháng tuổi)</h4>
+				</div>
+				<div class="modal-body">					
+					<img class="img-responsive" src="img/sanpham5.jpg" alt="Husky Nâu đỏ (6 tháng tuổi)" width="460" height="345"> 
+					<br>
+					<p><b>Mã sản phẩm:</b> H0001</p>
+					<p><b>Tên sản phẩm:</b> Husky Nâu đỏ (6 tháng tuổi)</p>
+					<p><b>Giới tính:</b> Cái</p>
+					<p><b>Số lượng còn lại:</b> 1</p>
+					<p><b>Giá:</b> 15.000.000đ</p>
+					<p><b>Giống:</b> Husky</p>
+					<p><b>Ghi chú:</b> Đã tiêm đủ 3 mũi</p>
+					<p><b>Trạng thái sản phẩm:</b> Còn hàng</p>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary">Thay đổi thông tin</button>
+					<button type="submit" class="btn btn-primary">Xóa sản phẩm</button>
+					<button type="submit" class="btn btn-default" data-dismiss="modal">Đóng</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="SanPham6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Thông tin sản phẩm: Samoyed (3 tháng tuổi)</h4>
+				</div>
+				<div class="modal-body">					
+					<img class="img-responsive" src="img/sanpham67.jpg" alt="Samoyed (3 tháng tuổi)" width="460" height="345"> 
+					<br>
+					<p><b>Mã sản phẩm:</b> S0001</p>
+					<p><b>Tên sản phẩm:</b> Samoyed (3 tháng tuổi)</p>
+					<p><b>Giới tính:</b> Cái</p>
+					<p><b>Số lượng còn lại:</b> 1</p>
+					<p><b>Giá:</b> 7.000.000đ</p>
+					<p><b>Giống:</b> Samoyed</p>
+					<p><b>Ghi chú:</b> Đã tiêm 2 mũi (15/6/2015: tiêm nhắc lại lần 3)</p>
+					<p><b>Trạng thái sản phẩm:</b> Còn hàng</p>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary">Thay đổi thông tin</button>
+					<button type="submit" class="btn btn-primary">Xóa sản phẩm</button>
+					<button type="submit" class="btn btn-default" data-dismiss="modal">Đóng</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="SanPham7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Thông tin sản phẩm: Samoyed (3 tháng tuổi)</h4>
+				</div>
+				<div class="modal-body">					
+					<img class="img-responsive" src="img/sanpham67.jpg" alt="Samoyed (3 tháng tuổi)" width="460" height="345"> 
+					<br>
+					<p><b>Mã sản phẩm:</b> S0002</p>
+					<p><b>Tên sản phẩm:</b> Samoyed (3 tháng tuổi)</p>
+					<p><b>Giới tính:</b> Đực</p>
+					<p><b>Số lượng còn lại:</b> 1</p>
+					<p><b>Giá:</b> 7.000.000đ</p>
+					<p><b>Giống:</b> Samoyed</p>
+					<p><b>Ghi chú:</b> Đã tiêm 2 mũi (15/6/2015: tiêm nhắc lại lần 3)</p>
+					<p><b>Trạng thái sản phẩm:</b> Còn hàng</p>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary">Thay đổi thông tin</button>
+					<button type="submit" class="btn btn-primary">Xóa sản phẩm</button>
+					<button type="submit" class="btn btn-default" data-dismiss="modal">Đóng</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+    <!-- Table Filter -->
+    <script language="javascript" type="text/javascript" src="tablefilter/actb.js"></script><!-- External script -->
+	<script language="javascript" type="text/javascript" src="tablefilter/tablefilter.js"></script>
+
+    <!-- jQuery -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="dist/js/sb-admin-2.js"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+                responsive: true
+        });
+    });
+    </script>
+    
+    <script language="javascript" type="text/javascript">
+	//<![CDATA[
+		var table2_Props = 	{	col_0: "select",							
+								col_1: "select",
+								col_2: "select",
+								col_3: "select",
+								col_4: "select",
+								col_5: "select",
+								col_6: "select",
+								display_all_text: " [ Tất cả ] ",
+								sort_select: true
+							};
+		setFilterGrid("dataTables-example",table2_Props);
+	//]]>
+	</script>
+
+</body>
+
+</html>
